@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- DEMO: neindexovat (feedback verze, ne produkce) -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- SEO -->
+  <title>Spisovka — elektronická spisová služba pro ZŠ a SŠ od Scia</title>
+  <meta name="description" content="Od 1. 1. 2027 musí základní a střední školy vést spisovou službu elektronicky. Spisovka od Scia vás dostane do souladu se zákonem bez stresu. Nechte nám kontakt." />
+  <meta name="keywords" content="elektronická spisová služba školy, spisová služba 2027, eSSL školy, spisová služba ZŠ SŠ" />
+  <link rel="canonical" href="https://TODO-domena.cz/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:title" content="Spisovka — elektronická spisová služba pro školy od ledna 2027" />
+  <meta property="og:description" content="Od 1. 1. 2027 musí ZŠ a SŠ vést spisovou službu elektronicky. Spisovka od Scia vás na to připraví v klidu." />
+  <!-- TODO: nahradit absolutní URL po nasazení domény; pro maximální kompatibilitu vyexportovat og-image do PNG -->
+  <meta property="og:image" content="https://TODO-domena.cz/assets/img/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://TODO-domena.cz/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (TODO: doplnit kompletní sadu favicon/apple-touch po dodání loga) -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Font preload (rychlejší vykreslení nadpisů) -->
+  <link rel="preload" href="assets/fonts/montserrat-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ============================================================= -->
+  <!--  ANALYTIKA — placeholder. Vlož sem GTM / GA4 / Plausible.     -->
+  <!--  Konverze "odeslání formuláře" se měří přes window.dataLayer  -->
+  <!--  v js/form.js (událost 'lead_submit'). NEVKLÁDAT reálné ID    -->
+  <!--  dokud není rozhodnut nástroj — viz README, sekce Analytika.  -->
+  <!-- ============================================================= -->
+  <!--
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'TODO-GA-MEASUREMENT-ID');
+  </script>
+  -->
+
+  <!-- JSON-LD: strukturovaná data o produktu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Spisovka",
+    "brand": { "@type": "Brand", "name": "Scio" },
+    "category": "Elektronická spisová služba pro základní a střední školy",
+    "description": "Elektronická spisová služba pro základní a střední školy, v souladu se zákonem č. 499/2004 Sb. a Národním standardem (NSESSS). Ostrý provoz od 1. 1. 2027."
+  }
+  </script>
+</head>
+
+<body class="min-h-screen">
+  <a href="#hlavni-obsah" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-white">Přeskočit na obsah</a>
+
+  <!-- ================= NAVIGACE ================= -->
+  <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <nav class="container-wide flex h-16 items-center justify-between" aria-label="Hlavní">
+      <a href="#hlavni-obsah" class="flex items-center gap-2.5" aria-label="Spisovka od Scia — domů">
+        <!-- TODO: nahradit oficiálním logem Scio (SVG). Zatím čistý wordmark. -->
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#0075ff" />
+          <path d="M9 11.5h11M9 16h14M9 20.5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+        </svg>
+        <span class="text-lg font-extrabold tracking-tight text-slate-900">Spisovka</span>
+        <span class="hidden text-sm font-medium text-slate-400 sm:inline">od&nbsp;Scia</span>
+      </a>
+      <div class="flex items-center gap-5">
+        <a href="#jak-to-probiha" class="hidden text-sm font-semibold text-slate-600 transition hover:text-brand md:inline">Jak to probíhá</a>
+        <a href="#faq" class="hidden text-sm font-semibold text-slate-600 transition hover:text-brand md:inline">Časté dotazy</a>
+        <a href="#formular" class="rounded-xl bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-dark">Mám zájem</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="hlavni-obsah">
+
+    <!-- ================= 1. HERO ================= -->
+    <section class="relative overflow-hidden bg-brand-soft">
+      <div class="container-tight py-16 sm:py-24">
+        <p class="section-eyebrow">Elektronická spisová služba pro základní a střední školy</p>
+        <h1 class="max-w-3xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+          Od ledna 2027 musíte vést spisovou službu elektronicky. Připravíme vás na to v&nbsp;klidu.
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+          Spisovka je řešení od Scia, které vás dostane do souladu se zákonem. Bez úřednické složitosti a bez stresu na poslední chvíli. Začněte už teď tím, že nám dáte vědět.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#formular" class="btn-primary">Mám zájem</a>
+          <a href="#jak-to-probiha" class="inline-flex items-center gap-1.5 px-2 py-2 text-base font-semibold text-brand transition hover:text-brand-dark">
+            Jak to bude probíhat
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-slate-500">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Od Scia. 30 let ve školství. Testujeme na vlastních 25 školách.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 2. CO SE MĚNÍ ================= -->
+    <section id="co-se-meni" class="py-16 sm:py-20">
+      <div class="container-tight">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Co se od 1. ledna 2027 mění</h2>
+        <div class="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed text-slate-600">
+          <p>
+            Novela zákona o archivnictví a spisové službě (č.&nbsp;499/2004&nbsp;Sb.) ukládá základním a středním školám vést spisovou službu elektronicky. Týká se to všech škol bez ohledu na zřizovatele. Výjimku mají jen mateřské školy a vybraná školská zařízení.
+          </p>
+          <p>
+            Dobrá zpráva: školy nemusí mít atestovaný systém jako úřady. Vaše řešení ale musí splňovat zákon, prováděcí vyhlášku i Národní standard (NSESSS). Přesně to pro vás chystáme.
+          </p>
+        </div>
+
+        <ul class="mt-10 grid gap-4 sm:grid-cols-3">
+          <li class="card flex items-start gap-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0 text-brand" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 6h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Termín</span><span class="text-lg font-bold text-slate-900">1.&nbsp;1.&nbsp;2027</span></span>
+          </li>
+          <li class="card flex items-start gap-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0 text-brand" aria-hidden="true"><path d="M3 9l9-5 9 5-9 5-9-5zm0 0v6m6 1v-3.5L12 14l3-1.5V16a3 3 0 01-6 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Koho se týká</span><span class="text-lg font-bold text-slate-900">Všechny ZŠ a SŠ</span></span>
+          </li>
+          <li class="card flex items-start gap-3">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="mt-0.5 shrink-0 text-brand" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span><span class="block text-sm font-semibold uppercase tracking-wide text-slate-400">Atestace</span><span class="text-lg font-bold text-slate-900">Pro školy není povinná</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= 3. CO TO PRO VÁS ZNAMENÁ ================= -->
+    <section id="co-to-znamena" class="bg-brand-soft py-16 sm:py-20">
+      <div class="container-tight">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Co to pro vás v praxi znamená</h2>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="card">
+            <h3 class="text-lg font-bold text-slate-900">Všechny dokumenty na jednom místě.</h3>
+            <p class="mt-2 text-slate-600">Datovka, e-mailová podatelna i papír v jedné evidenci. Konec roztříštěnosti mezi e-maily, disky a školním systémem.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-lg font-bold text-slate-900">Soulad se zákonem a klid při kontrole.</h3>
+            <p class="mt-2 text-slate-600">Evidence, podpisy, skartace i auditní stopa tak, jak to vyžaduje legislativa a GDPR.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-lg font-bold text-slate-900">Zvládne to i člověk, co spisovku nikdy nedělal.</h3>
+            <p class="mt-2 text-slate-600">Navrženo pro sekretariát a vedení školy, ne pro úředníky.</p>
+          </div>
+          <div class="card">
+            <h3 class="text-lg font-bold text-slate-900">Bakaláři ani Edookit tohle neřeší.</h3>
+            <p class="mt-2 text-slate-600">Školní systémy vedou pedagogickou agendu, ne spisovou službu podle zákona. Spisovku používáte vedle systému, který znáte. Nic neměníte a nic neopouštíte, jen ho doplníte.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. PROČ SPISOVKA ================= -->
+    <section id="proc-spisovka" class="py-16 sm:py-20">
+      <div class="container-tight">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Proč Spisovka</h2>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+          Děláme to pro školy, protože školství rozumíme. Scio v něm působí přes 30 let a samo provozuje 25 vlastních škol, které Spisovku budou používat jako první.
+        </p>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="card">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Jednoduchá.</h3>
+            <p class="mt-1.5 text-slate-600">Srozumitelné prostředí. Žádný úřednický software.</p>
+          </div>
+          <div class="card">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">V souladu se zákonem.</h3>
+            <p class="mt-1.5 text-slate-600">Splní požadavky zákona, vyhlášky i Národního standardu.</p>
+          </div>
+          <div class="card">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 7v5l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Včas.</h3>
+            <p class="mt-1.5 text-slate-600">V ostrém provozu od ledna 2027. Máme jasný plán, jak vás tam dostat.</p>
+          </div>
+          <!-- Lidská podpora = prvotřídní sdělení; karta vizuálně zvýrazněná -->
+          <div class="card border-brand-light bg-brand-soft ring-1 ring-brand-light">
+            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white text-brand" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm5-4a3 3 0 10-2-5.24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Nezůstanete na to sami.</h3>
+            <p class="mt-1.5 text-slate-700">Máte u nás konkrétního člověka, na kterého se kdykoliv obrátíte. Provedeme vás přípravou, dáme školení i lidskou podporu.</p>
+          </div>
+        </div>
+
+        <!-- Cenový proužek — transparentní cena jako výhoda -->
+        <div class="mt-6 flex flex-col items-start gap-4 rounded-2xl border border-slate-200 bg-slate-900 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-wide text-brand-light">Férová a transparentní cena</p>
+            <p class="mt-1 text-2xl font-extrabold sm:text-3xl">
+              <span data-config-price>10&nbsp;000&nbsp;Kč</span> ročně za školu
+            </p>
+            <p class="mt-1.5 max-w-xl text-slate-300">Za zlomek ceny srovnatelných řešení. Žádné skryté poplatky, žádné „cena na poptávku".</p>
+          </div>
+          <a href="#formular" class="btn-primary shrink-0">Mám zájem</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. JAK TO BUDE PROBÍHAT (TIMELINE) ================= -->
+    <section id="jak-to-probiha" class="bg-brand-soft py-16 sm:py-20">
+      <div class="container-wide">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Stihnete to. Máme plán.</h2>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+          Nemusíte čekat na poslední chvíli. Začít se dá v klidu už teď. Software naběhne na ostro od ledna 2027.
+        </p>
+
+        <!-- Timeline: na mobilu vertikální (pod sebou), na desktopu horizontální -->
+        <ol class="relative mt-12 grid gap-8 md:grid-cols-4 md:gap-6">
+          <!-- spojnice na desktopu -->
+          <div class="absolute left-5 top-2 hidden h-[calc(100%-1rem)] w-0.5 bg-brand-light md:left-0 md:top-6 md:h-0.5 md:w-full md:block" aria-hidden="true"></div>
+          <div class="absolute left-5 top-2 h-[calc(100%-1rem)] w-0.5 bg-brand-light md:hidden" aria-hidden="true"></div>
+
+          <li class="relative pl-14 md:pl-0">
+            <div class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-brand font-bold text-white shadow md:relative md:mb-5" aria-hidden="true">1</div>
+            <div class="md:pr-4">
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand">Teď</p>
+              <h3 class="mt-1 text-lg font-bold text-slate-900">Vyjádříte zájem</h3>
+              <p class="mt-1.5 text-slate-600">Ozveme se vám a domluvíme postup.</p>
+            </div>
+          </li>
+
+          <li class="relative pl-14 md:pl-0">
+            <div class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-brand font-bold text-white shadow md:relative md:mb-5" aria-hidden="true">2</div>
+            <div class="md:pr-4">
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand">Podzim 2026</p>
+              <h3 class="mt-1 text-lg font-bold text-slate-900">Přípravy a školení</h3>
+              <p class="mt-1.5 text-slate-600">Pomůžeme vám se směrnicí, spisovým plánem a rolemi. To je potřeba udělat tak jako tak, ještě před softwarem.</p>
+            </div>
+          </li>
+
+          <li class="relative pl-14 md:pl-0">
+            <div class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-brand font-bold text-white shadow md:relative md:mb-5" aria-hidden="true">3</div>
+            <div class="md:pr-4">
+              <p class="text-sm font-semibold uppercase tracking-wide text-brand">Zima 2026</p>
+              <h3 class="mt-1 text-lg font-bold text-slate-900">Testovací provoz</h3>
+              <p class="mt-1.5 text-slate-600">Spisovku si vyzkoušíte nanečisto, my ladíme detaily na vlastních školách.</p>
+            </div>
+          </li>
+
+          <!-- Cílová fáze — zvýrazněný tvrdý termín -->
+          <li class="relative pl-14 md:pl-0">
+            <div class="absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full bg-accent font-bold text-white shadow ring-4 ring-accent-soft md:relative md:mb-5" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="rounded-2xl border-2 border-accent bg-white p-4 md:mr-0">
+              <p class="text-sm font-bold uppercase tracking-wide text-accent">1.&nbsp;1.&nbsp;2027 — ostrý provoz</p>
+              <h3 class="mt-1 text-lg font-bold text-slate-900">Leden 2027</h3>
+              <p class="mt-1.5 text-slate-600">Vedete spisovou službu elektronicky a v souladu se zákonem.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= 6. DŮVĚRA ================= -->
+    <section id="proc-nam-verit" class="py-16 sm:py-20">
+      <div class="container-tight">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Proč to s námi bude fungovat</h2>
+        <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+          Scio není dodavatel, který školství zná z dálky. Sami provozujeme 25 škol, které mají stejnou povinnost jako vy. Spisovku stavíme v první řadě pro ně, testujeme ji na nich a teprve ověřené řešení nabízíme dál. Když řekneme, že to bude od ledna 2027 fungovat, je to proto, že na tom závisí i naše vlastní školy.
+        </p>
+        <dl class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="card text-center">
+            <dt class="order-2 text-sm font-medium text-slate-500">let ve školství</dt>
+            <dd class="order-1 text-4xl font-extrabold text-brand">30</dd>
+          </div>
+          <div class="card text-center">
+            <dt class="order-2 text-sm font-medium text-slate-500">vlastních škol Scio jako pilot</dt>
+            <dd class="order-1 text-4xl font-extrabold text-brand">25</dd>
+          </div>
+          <div class="card text-center">
+            <dt class="order-2 text-sm font-medium text-slate-500">kontakt na školy</dt>
+            <dd class="order-1 text-2xl font-extrabold text-brand sm:text-3xl">po celé ČR</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= 7. FORMULÁŘ ================= -->
+    <section id="formular" class="bg-brand-soft py-16 sm:py-20">
+      <div class="container-tight max-w-2xl">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Chci, abyste mi dali vědět</h2>
+        <p class="mt-4 text-lg leading-relaxed text-slate-600">
+          Nechte nám kontakt. Ozveme se vám s dalšími kroky a na podzim vás pozveme do přípravy. Žádný závazek, nic teď neplatíte.
+        </p>
+
+        <!-- Stav: úspěch (skrytý, zobrazí js/form.js) -->
+        <div id="form-success" class="mt-8 hidden rounded-2xl border border-brand-light bg-white p-8 text-center" role="status" aria-live="polite">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-soft text-brand" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Děkujeme. Ozveme se vám.</h3>
+          <p class="mt-2 text-slate-600">Mezitím sledujte termíny krajských školení MŠMT.</p>
+        </div>
+
+        <form id="lead-form" class="mt-8 space-y-5" novalidate>
+          <div>
+            <label class="field-label" for="name">Jméno a příjmení <span class="text-accent">*</span></label>
+            <input class="field-input" type="text" id="name" name="name" autocomplete="name" required aria-required="true" />
+            <p class="mt-1 hidden text-sm text-accent" data-error-for="name"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="email">E-mail <span class="text-accent">*</span></label>
+            <input class="field-input" type="email" id="email" name="email" autocomplete="email" required aria-required="true" />
+            <p class="mt-1 hidden text-sm text-accent" data-error-for="email"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="phone">Telefon <span class="font-normal text-slate-400">(nepovinné)</span></label>
+            <input class="field-input" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+            <p class="mt-1 hidden text-sm text-accent" data-error-for="phone"></p>
+          </div>
+
+          <div>
+            <label class="field-label" for="school">Název školy <span class="text-accent">*</span></label>
+            <input class="field-input" type="text" id="school" name="school" autocomplete="organization" required aria-required="true" />
+            <p class="mt-1 hidden text-sm text-accent" data-error-for="school"></p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="field-label" for="schoolType">Typ školy <span class="text-accent">*</span></label>
+              <select class="field-input" id="schoolType" name="schoolType" required aria-required="true">
+                <option value="" disabled selected>Vyberte…</option>
+                <option value="ZŠ">ZŠ</option>
+                <option value="SŠ">SŠ</option>
+                <option value="gymnázium">Gymnázium</option>
+                <option value="ZUŠ">ZUŠ</option>
+                <option value="jiné">Jiné</option>
+              </select>
+              <p class="mt-1 hidden text-sm text-accent" data-error-for="schoolType"></p>
+            </div>
+
+            <div>
+              <label class="field-label" for="role">Vaše role <span class="text-accent">*</span></label>
+              <select class="field-input" id="role" name="role" required aria-required="true">
+                <option value="" disabled selected>Vyberte…</option>
+                <option value="ředitel/ka">Ředitel/ka</option>
+                <option value="administrativa, sekretariát">Administrativa, sekretariát</option>
+                <option value="jiné">Jiné</option>
+              </select>
+              <p class="mt-1 hidden text-sm text-accent" data-error-for="role"></p>
+            </div>
+          </div>
+
+          <!-- GDPR souhlas — povinný -->
+          <div class="flex items-start gap-3">
+            <input class="mt-1 h-5 w-5 shrink-0 rounded border-slate-300 text-brand focus:ring-brand" type="checkbox" id="gdpr" name="gdpr" required aria-required="true" />
+            <label class="text-sm text-slate-600" for="gdpr">
+              <!-- TODO: doplnit přesné znění souhlasu + odkaz na zásady zpracování osobních údajů Scio -->
+              Souhlasím se zpracováním osobních údajů za účelem informování o produktu Spisovka.
+              <a href="#" class="font-semibold text-brand underline hover:text-brand-dark" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>. <span class="text-accent">*</span>
+            </label>
+          </div>
+          <p class="-mt-2 hidden text-sm text-accent" data-error-for="gdpr"></p>
+
+          <!-- Chybová hláška odeslání -->
+          <div id="form-error" class="hidden rounded-xl border border-accent bg-accent-soft p-4 text-sm text-slate-800" role="alert">
+            Odeslání se teď nepovedlo. Zkuste to prosím znovu, nebo nám napište na
+            <a class="font-semibold text-brand underline" href="#" data-todo="kontaktni-email">kontaktní e-mail</a>.
+          </div>
+
+          <button id="submit-btn" class="btn-primary w-full sm:w-auto" type="submit">
+            <span data-submit-label>Odeslat zájem</span>
+            <svg data-submit-spinner class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" class="opacity-25"/><path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </button>
+
+          <p class="text-sm text-slate-500">Kontakt použijeme jen k tomu, abychom vás informovali o Spisovce.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= 8. FAQ ================= -->
+    <section id="faq" class="py-16 sm:py-20">
+      <div class="container-tight max-w-3xl">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Časté dotazy</h2>
+        <div class="mt-8 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Musí naše škola opravdu vést spisovou službu elektronicky?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">Ano. Od 1.&nbsp;1.&nbsp;2027 to platí pro všechny základní a střední školy. Výjimku mají jen mateřské školy a vybraná školská zařízení.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Musíme mít atestovaný systém?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">Ne. Školy mají z atestace výjimku. Systém ale musí splňovat zákon, vyhlášku i Národní standard. Spisovku stavíme přesně tak, aby je splnila.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Máme Bakaláře. Nestačí to?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">Nestačí. Bakaláři a podobné systémy vedou pedagogickou agendu, ne spisovou službu podle zákona o archivnictví. Spisovka je doplní, nenahrazuje je.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Kdy to bude hotové?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">V ostrém provozu od ledna 2027. Na podzim 2026 začnou přípravy a školení, na přelomu roku testovací provoz.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Kolik to bude stát?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600"><span data-config-price>10&nbsp;000&nbsp;Kč</span> ročně za školu, výrazně méně než u srovnatelných řešení. Cena je transparentní, bez skrytých poplatků. Teď nic neplatíte, stačí nám dát vědět, že máte zájem.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Co když si nebudeme vědět rady?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">Nezůstanete na to sami. Máte u nás konkrétního člověka, na kterého se kdykoliv obrátíte, plus návody a školení. Spisovku stavíme tak, aby ji zvládl i ten, kdo spisovou službu nikdy nedělal.</p>
+          </details>
+
+          <details class="group p-5 sm:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
+              Co máme dělat teď?
+              <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <p class="mt-3 text-slate-600">Nechte nám kontakt. Zbytkem vás provedeme.</p>
+          </details>
+
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="#formular" class="btn-primary">Mám zájem</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= 9. PATIČKA ================= -->
+  <footer class="border-t border-slate-200 bg-white py-12">
+    <div class="container-wide flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <div class="flex items-center gap-2.5">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#0075ff" />
+            <path d="M9 11.5h11M9 16h14M9 20.5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+          </svg>
+          <span class="text-base font-extrabold text-slate-900">Spisovka</span>
+          <span class="text-sm text-slate-400">od Scia</span>
+        </div>
+        <p class="mt-3 max-w-md text-sm text-slate-500">
+          Elektronická spisová služba pro základní a střední školy. Připravujeme spuštění k 1.&nbsp;1.&nbsp;2027.
+        </p>
+      </div>
+      <nav class="flex flex-col gap-2 text-sm" aria-label="Patička">
+        <!-- TODO: doplnit kontaktní e-mail pro školy (zatím neurčen) -->
+        <a class="font-semibold text-slate-600 hover:text-brand" href="#" data-todo="kontaktni-email">Kontakt pro školy (TODO)</a>
+        <a class="font-semibold text-slate-600 hover:text-brand" href="https://www.scio.cz" target="_blank" rel="noopener">scio.cz</a>
+        <!-- TODO: odkaz na zásady zpracování osobních údajů Scio -->
+        <a class="font-semibold text-slate-600 hover:text-brand" href="#" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>
+      </nav>
+    </div>
+    <div class="container-wide mt-8 border-t border-slate-100 pt-6 text-sm text-slate-400">
+      © 2026 SCIO
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</body>
+</html>

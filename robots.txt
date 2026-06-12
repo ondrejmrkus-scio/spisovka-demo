@@ -1,0 +1,3 @@
+# DEMO pro feedback týmu — neindexovat ve vyhledávačích.
+User-agent: *
+Disallow: /
