@@ -69,12 +69,9 @@
   <header class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
     <nav class="container-wide flex h-16 items-center justify-between" aria-label="Hlavní">
       <a href="#hlavni-obsah" class="flex items-center gap-2.5" aria-label="Spisovka od Scio – domů">
-        <!-- TODO: nahradit oficiálním logem Scio (SVG). Zatím čistý wordmark. -->
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#0075ff" />
-          <path d="M9 11.5h11M9 16h14M9 20.5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
-        </svg>
-        <span class="text-lg font-extrabold tracking-tight text-slate-900">Spisovka</span>
+        <!-- Wordmark Spisovka: modrá tečka místo „o" navazuje na značku Scio. -->
+        <span class="text-xl font-extrabold tracking-tight text-slate-900">Spis<span aria-hidden="true" style="display:inline-block;width:.45em;height:.45em;border-radius:9999px;background:var(--color-brand);vertical-align:middle;margin:0 .05em 0 .07em;"></span>vka</span>
+        <span aria-hidden="true" class="hidden sm:block" style="width:1px;height:20px;background:var(--color-slate-200);"></span>
         <span class="hidden text-sm font-medium text-slate-400 sm:inline">od&nbsp;Scio</span>
       </a>
       <div class="flex items-center gap-5">
@@ -509,11 +506,8 @@
     <div class="container-wide flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
       <div>
         <div class="flex items-center gap-2.5">
-          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <rect width="32" height="32" rx="8" fill="#0075ff" />
-            <path d="M9 11.5h11M9 16h14M9 20.5h8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
-          </svg>
-          <span class="text-base font-extrabold text-slate-900">Spisovka</span>
+          <span class="text-lg font-extrabold tracking-tight text-slate-900">Spis<span aria-hidden="true" style="display:inline-block;width:.45em;height:.45em;border-radius:9999px;background:var(--color-brand);vertical-align:middle;margin:0 .05em 0 .07em;"></span>vka</span>
+          <span aria-hidden="true" style="width:1px;height:18px;background:var(--color-slate-200);"></span>
           <span class="text-sm text-slate-400">od Scio</span>
         </div>
         <p class="mt-3 max-w-md text-sm text-slate-500">

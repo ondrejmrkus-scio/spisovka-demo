@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="248" height="48" viewBox="0 0 248 48" fill="none" role="img" aria-label="Spisovka od Scio">
+  <text font-family="Inter, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Arial, sans-serif" font-weight="700" font-size="38" letter-spacing="-1.4" fill="#262626" x="0" y="34">Spis</text>
+  <circle cx="80" cy="24.5" r="9.2" fill="#0075FF"></circle>
+  <text font-family="Inter, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Arial, sans-serif" font-weight="700" font-size="38" letter-spacing="-1.4" fill="#262626" x="92" y="34">vka</text>
+  <line x1="158" y1="11" x2="158" y2="37" stroke="#E3E5E8" stroke-width="1.5"></line>
+  <text font-family="Inter, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Arial, sans-serif" font-weight="500" font-size="15" letter-spacing="-0.15" fill="#767E86" x="172" y="29">od Scio</text>
+</svg>
