@@ -95,7 +95,7 @@
           Od ledna 2027 musíte vést spisovou službu elektronicky. Připravíme vás na to v&nbsp;klidu.
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-          Spisovka je řešení od Scio, které vás dostane do souladu se zákonem. Bez úřednické složitosti a bez stresu na poslední chvíli.
+          Spisovka je řešení od Scio, které vaši školu dostane do souladu se zákonem. Zvládne ji i ten, kdo spisovou službu nikdy nedělal. Bez úřednické složitosti a bez stresu na poslední chvíli.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a href="#formular" class="btn-primary">Mám zájem</a>
@@ -117,7 +117,7 @@
         <h2 class="text-2xl font-extrabold sm:text-3xl">Co se od 1. ledna 2027 mění</h2>
         <div class="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed text-slate-600">
           <p>
-            Novela zákona o archivnictví a spisové službě (č.&nbsp;499/2004&nbsp;Sb.) ukládá školám a školským zařízením vést spisovou službu elektronicky. Týká se to všech bez ohledu na zřizovatele — výjimku mají jen mateřské školy, domovy mládeže s internáty a školní jídelny.
+            Od 1.&nbsp;1.&nbsp;2027 musí každá škola a školské zařízení vést spisovou službu elektronicky. Vyplývá to z novely zákona o archivnictví a spisové službě (č.&nbsp;499/2004&nbsp;Sb.) a týká se všech bez ohledu na zřizovatele. Výjimku mají jen mateřské školy, domovy mládeže s internáty a školní jídelny.
           </p>
           <p>
             Elektronické dokumenty vám přitom chodí už dnes: datovou schránkou, středním školám navíc přihlášky přes DIPSY. I ty patří do spisové služby.
@@ -162,7 +162,7 @@
             <p class="mt-2 text-slate-600">Navrženo pro školu. Srozumitelné kroky a návody místo úřednického žargonu.</p>
           </div>
           <div class="card">
-            <h3 class="text-lg font-bold text-slate-900">Bakaláři ani Edookit tohle neřeší.</h3>
+            <h3 class="text-lg font-bold text-slate-900">Bakaláři ani Edookit spisovou službu nevedou.</h3>
             <p class="mt-2 text-slate-600">Školní systémy vedou pedagogickou agendu, ne spisovou službu podle zákona. Spisovka funguje vedle systému, který už znáte, jen ho doplní.</p>
           </div>
         </div>
@@ -317,7 +317,7 @@
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3 class="text-xl font-bold text-slate-900">Děkujeme. Ozveme se vám.</h3>
-          <p class="mt-2 text-slate-600">Mezitím sledujte krajská školení MŠMT ke spisové službě, letos běží v každém kraji.</p>
+          <p class="mt-2 text-slate-600">Brzy se vám ozveme a domluvíme další postup. Mezitím můžete sledovat krajská školení MŠMT ke spisové službě, letos běží v každém kraji.</p>
         </div>
 
         <form id="lead-form" class="mt-8 space-y-5" novalidate>
@@ -377,15 +377,16 @@
             <label class="text-sm text-slate-600" for="gdpr">
               <!-- TODO: doplnit přesné znění souhlasu + odkaz na zásady zpracování osobních údajů Scio -->
               Souhlasím se zpracováním osobních údajů za účelem informování o produktu Spisovka.
-              <a href="#" class="font-semibold text-brand underline hover:text-brand-dark" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>. <span class="text-accent">*</span>
+              <a href="zasady-zpracovani.html" target="_blank" rel="noopener" class="font-semibold text-brand underline hover:text-brand-dark" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>. <span class="text-accent">*</span>
             </label>
           </div>
           <p class="-mt-2 hidden text-sm text-accent" data-error-for="gdpr"></p>
 
           <!-- Chybová hláška odeslání -->
           <div id="form-error" class="hidden rounded-xl border border-accent bg-accent-soft p-4 text-sm text-slate-800" role="alert">
-            Odeslání se teď nepovedlo. Zkuste to prosím znovu, nebo nám napište na
-            <a class="font-semibold text-brand underline" href="#" data-todo="kontaktni-email">kontaktní e-mail</a>.
+            Odeslání se teď nepovedlo. Zkuste to prosím za chvíli znovu.
+            <!-- TODO: až bude kontaktní e-mail, doplnit alternativu „nebo nám napište na ..." -->
+            <span class="hidden" data-todo="kontaktni-email"></span>
           </div>
 
           <button id="submit-btn" class="btn-primary w-full sm:w-auto" type="submit">
@@ -456,7 +457,7 @@
               Kolik to bude stát?
               <svg class="shrink-0 text-slate-400 transition group-open:rotate-180" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </summary>
-            <p class="mt-3 text-slate-600"><span data-config-price>10&nbsp;000&nbsp;Kč</span> ročně za školu. V ceně je zavedení, školicí videa i telefonická podpora. Žádné skryté poplatky, žádná „cena na poptávku". Teď nic neplatíte, stačí nám dát vědět, že máte zájem.</p>
+            <p class="mt-3 text-slate-600"><span data-config-price>10&nbsp;000&nbsp;Kč</span> ročně za školu, včetně zavedení, školicích videí i telefonické podpory. Žádný jednorázový poplatek za zavedení, žádné skryté poplatky a žádná „cena na poptávku". Teď nic neplatíte, stačí nám dát vědět, že máte zájem.</p>
           </details>
 
           <details class="group p-5 sm:p-6">
@@ -534,11 +535,11 @@
         </p>
       </div>
       <nav class="flex flex-col gap-2 text-sm" aria-label="Patička">
-        <!-- TODO: doplnit kontaktní e-mail pro školy (zatím neurčen) -->
-        <a class="font-semibold text-slate-600 hover:text-brand" href="#" data-todo="kontaktni-email">Kontakt pro školy (TODO)</a>
+        <!-- TODO: až bude kontaktní e-mail pro školy, nahradit span odkazem mailto: -->
+        <span class="font-semibold text-slate-600" data-todo="kontaktni-email">Kontakt pro školy: doplníme</span>
         <a class="font-semibold text-slate-600 hover:text-brand" href="https://www.scio.cz" target="_blank" rel="noopener">scio.cz</a>
         <!-- TODO: odkaz na zásady zpracování osobních údajů Scio -->
-        <a class="font-semibold text-slate-600 hover:text-brand" href="#" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>
+        <a class="font-semibold text-slate-600 hover:text-brand" href="zasady-zpracovani.html" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>
       </nav>
     </div>
     <div class="container-wide mt-8 border-t border-slate-100 pt-6 text-sm text-slate-400">
