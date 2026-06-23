@@ -34,6 +34,15 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- Výška embednutého Google Formuláře. Iframe je cross-origin, takže ho nelze
+       auto-resizovat podle obsahu; hodnoty odpovídají reálné výšce formuláře.
+       Mobil (užší = víc zalomeného textu) potřebuje víc, desktop méně. -->
+  <style>
+    #lead-iframe { height: 1040px; }
+    @media (min-width: 480px) { #lead-iframe { height: 940px; } }
+    @media (min-width: 640px) { #lead-iframe { height: 880px; } }
+  </style>
+
   <!-- ============================================================= -->
   <!--  ANALYTIKA — placeholder. Vlož sem GTM / GA4 / Plausible.     -->
   <!--  Konverze "odeslání formuláře" se měří přes window.dataLayer  -->
@@ -297,96 +306,24 @@
     <!-- ================= 7. FORMULÁŘ ================= -->
     <section id="formular" class="bg-brand-soft py-16 sm:py-20">
       <div class="container-tight max-w-2xl">
-        <h2 class="text-2xl font-extrabold sm:text-3xl">Vyplňte nezávazný formulář</h2>
-        <p class="mt-4 text-lg leading-relaxed text-slate-600">
-          Nechte nám kontakt. Ozveme se vám s dalšími kroky a na podzim vás pozveme do přípravy. Nic teď neplatíte.
-        </p>
-
-        <!-- Stav: úspěch (skrytý, zobrazí js/form.js) -->
-        <div id="form-success" class="mt-8 hidden rounded-2xl border border-brand-light bg-white p-8 text-center" role="status" aria-live="polite">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-soft text-brand" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900">Děkujeme.</h3>
-          <p class="mt-2 text-slate-600">Brzy se vám ozveme a domluvíme další postup.</p>
+        <!-- Google Formulář (embed). Vlastní nadpis a popis má samotný formulář.
+             Data padají do propojeného Google Sheetu. -->
+        <div class="overflow-hidden rounded-2xl border border-brand-light bg-white">
+          <iframe
+            id="lead-iframe"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdwPFV0bBWgrJyGJtxJ09u_3fJLbs6JHblFdPoLAqoTMgeYZw/viewform?embedded=true"
+            title="Nezávazný formulář zájmu o Spisovku"
+            class="block w-full"
+            style="border:0;"
+            loading="lazy">
+            Načítání…
+          </iframe>
         </div>
 
-        <form id="lead-form" class="mt-8 space-y-5" novalidate>
-          <div>
-            <label class="field-label" for="name">Jméno a příjmení <span class="text-accent">*</span></label>
-            <input class="field-input" type="text" id="name" name="name" autocomplete="name" required aria-required="true" />
-            <p class="mt-1 hidden text-sm text-accent" data-error-for="name"></p>
-          </div>
-
-          <div>
-            <label class="field-label" for="email">E-mail <span class="text-accent">*</span></label>
-            <input class="field-input" type="email" id="email" name="email" autocomplete="email" required aria-required="true" />
-            <p class="mt-1 hidden text-sm text-accent" data-error-for="email"></p>
-          </div>
-
-          <div>
-            <label class="field-label" for="phone">Telefon <span class="font-normal text-slate-400">(nepovinné)</span></label>
-            <input class="field-input" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
-            <p class="mt-1 hidden text-sm text-accent" data-error-for="phone"></p>
-          </div>
-
-          <div>
-            <label class="field-label" for="school">Název školy <span class="text-accent">*</span></label>
-            <input class="field-input" type="text" id="school" name="school" autocomplete="organization" required aria-required="true" />
-            <p class="mt-1 hidden text-sm text-accent" data-error-for="school"></p>
-          </div>
-
-          <div class="grid gap-5 sm:grid-cols-2">
-            <div>
-              <label class="field-label" for="schoolType">Typ školy <span class="text-accent">*</span></label>
-              <select class="field-input" id="schoolType" name="schoolType" required aria-required="true">
-                <option value="" disabled selected>Vyberte…</option>
-                <option value="ZŠ">ZŠ</option>
-                <option value="SŠ">SŠ</option>
-                <option value="gymnázium">Gymnázium</option>
-                <option value="ZUŠ">ZUŠ</option>
-                <option value="jiné">Jiné</option>
-              </select>
-              <p class="mt-1 hidden text-sm text-accent" data-error-for="schoolType"></p>
-            </div>
-
-            <div>
-              <label class="field-label" for="role">Vaše role <span class="text-accent">*</span></label>
-              <select class="field-input" id="role" name="role" required aria-required="true">
-                <option value="" disabled selected>Vyberte…</option>
-                <option value="ředitel/ka">Ředitel/ka</option>
-                <option value="hospodářka, administrativa">Hospodářka, administrativa</option>
-                <option value="jiné">Jiné</option>
-              </select>
-              <p class="mt-1 hidden text-sm text-accent" data-error-for="role"></p>
-            </div>
-          </div>
-
-          <!-- GDPR souhlas — povinný -->
-          <div class="flex items-start gap-3">
-            <input class="mt-1 h-5 w-5 shrink-0 rounded border-slate-300 text-brand focus:ring-brand" type="checkbox" id="gdpr" name="gdpr" required aria-required="true" />
-            <label class="text-sm text-slate-600" for="gdpr">
-              <!-- TODO: doplnit přesné znění souhlasu + odkaz na zásady zpracování osobních údajů Scio -->
-              Souhlasím se zpracováním osobních údajů za účelem informování o produktu Spisovka.
-              <a href="zasady-zpracovani.html" target="_blank" rel="noopener" class="font-semibold text-brand underline hover:text-brand-dark" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>. <span class="text-accent">*</span>
-            </label>
-          </div>
-          <p class="-mt-2 hidden text-sm text-accent" data-error-for="gdpr"></p>
-
-          <!-- Chybová hláška odeslání -->
-          <div id="form-error" class="hidden rounded-xl border border-accent bg-accent-soft p-4 text-sm text-slate-800" role="alert">
-            Odeslání se teď nepovedlo. Zkuste to prosím za chvíli znovu.
-            <!-- TODO: až bude kontaktní e-mail, doplnit alternativu „nebo nám napište na ..." -->
-            <span class="hidden" data-todo="kontaktni-email"></span>
-          </div>
-
-          <button id="submit-btn" class="btn-primary w-full sm:w-auto" type="submit">
-            <span data-submit-label>Odeslat zájem</span>
-            <svg data-submit-spinner class="hidden h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" class="opacity-25"/><path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-          </button>
-
-          <p class="text-sm text-slate-500">Kontakt použijeme jen k tomu, abychom vás informovali o Spisovce.</p>
-        </form>
+        <p class="mt-4 text-sm text-slate-500">
+          Kontakt použijeme jen k tomu, abychom vás informovali o Spisovce. Více v
+          <a href="zasady-zpracovani.html" target="_blank" rel="noopener" class="font-semibold text-brand underline hover:text-brand-dark">Zásadách zpracování osobních údajů</a>.
+        </p>
       </div>
     </section>
 
@@ -515,8 +452,7 @@
         </p>
       </div>
       <nav class="flex flex-col gap-2 text-sm" aria-label="Patička">
-        <!-- TODO: až bude kontaktní e-mail pro školy, nahradit span odkazem mailto: -->
-        <span class="font-semibold text-slate-600" data-todo="kontaktni-email">Kontakt pro školy: doplníme</span>
+        <span class="font-semibold text-slate-600">Kontakt pro školy: <a class="hover:text-brand underline" href="mailto:spisovka@scio.cz">spisovka@scio.cz</a></span>
         <a class="font-semibold text-slate-600 hover:text-brand" href="https://www.scio.cz" target="_blank" rel="noopener">scio.cz</a>
         <!-- TODO: odkaz na zásady zpracování osobních údajů Scio -->
         <a class="font-semibold text-slate-600 hover:text-brand" href="zasady-zpracovani.html" data-todo="gdpr-odkaz">Zásady zpracování osobních údajů</a>
@@ -529,6 +465,5 @@
 
   <script src="config.js"></script>
   <script src="js/main.js" defer></script>
-  <script src="js/form.js" defer></script>
 </body>
 </html>
