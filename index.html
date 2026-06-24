@@ -38,9 +38,38 @@
        auto-resizovat podle obsahu; hodnoty odpovídají reálné výšce formuláře.
        Mobil (užší = víc zalomeného textu) potřebuje víc, desktop méně. -->
   <style>
-    #lead-iframe { height: 1040px; }
-    @media (min-width: 480px) { #lead-iframe { height: 940px; } }
-    @media (min-width: 640px) { #lead-iframe { height: 880px; } }
+    #lead-iframe { height: 1140px; }
+    @media (min-width: 480px) { #lead-iframe { height: 1030px; } }
+    @media (min-width: 640px) { #lead-iframe { height: 960px; } }
+  </style>
+
+  <!-- Vizualizace: cesta dokumentu. Vlastní scoped CSS, nezávislé na Tailwind buildu. -->
+  <style>
+    .viz-wrap{margin-top:2rem}
+    .viz-track{display:flex;flex-direction:column;align-items:stretch;gap:.5rem}
+    .viz-node{border-radius:12px;padding:.8rem .9rem;text-align:center}
+    .viz-node--inputs{background:#fff;border:1px solid #e2e8f0}
+    .viz-inputs-label{font-size:.72rem;font-weight:700;color:#5b6b7a;margin-bottom:.45rem}
+    .viz-chips{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
+    .viz-chip{background:#f1f4f7;border:1px solid #dce1e7;border-radius:8px;padding:.35rem .6rem;font-size:.8rem;color:#374151;white-space:nowrap}
+    .viz-node--step{background:var(--color-brand-soft);border:1px solid var(--color-brand)}
+    .viz-node--end{background:var(--color-brand);border:1px solid var(--color-brand-dark)}
+    .viz-node__title{font-size:.88rem;font-weight:700;color:var(--color-brand-dark)}
+    .viz-node--end .viz-node__title{color:#fff}
+    .viz-node__sub{font-size:.74rem;color:#5b6b7a;margin-top:.1rem}
+    .viz-node--end .viz-node__sub{color:#d9e9ff}
+    .viz-sep{display:flex;align-items:center;justify-content:center;color:#9aa3ad}
+    .viz-sep svg{width:22px;height:22px;transform:rotate(90deg)}
+    .viz-audit{margin-top:.6rem;background:#dcfce7;border:1px solid #16a34a;border-radius:12px;padding:.7rem;text-align:center}
+    .viz-audit__title{font-size:.82rem;font-weight:700;color:#15803d}
+    .viz-audit__sub{font-size:.74rem;color:#166534;margin-top:.1rem}
+    @media(min-width:768px){
+      .viz-track{flex-direction:row;align-items:stretch;gap:0}
+      .viz-node{flex:1;display:flex;flex-direction:column;justify-content:center}
+      .viz-node--inputs{flex:1.25}
+      .viz-sep{flex:0 0 auto;padding:0 .35rem}
+      .viz-sep svg{transform:none}
+    }
   </style>
 
   <!-- ============================================================= -->
@@ -114,6 +143,40 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-brand" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Od Scio. Přes 30 let ve školství. Vytvořeno ve spolupráci s 28 vlastními školami a školskými zařízeními.
         </p>
+      </div>
+    </section>
+
+    <!-- ================= VIZ 1: CESTA DOKUMENTU ================= -->
+    <section class="py-12 sm:py-16">
+      <div class="container-tight">
+        <h2 class="text-2xl font-extrabold sm:text-3xl">Co spisová služba udělá s každým dokumentem</h2>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
+          Ať dorazí datovkou, e-mailem nebo na papíře, projde jednou evidencí: dostane jednací číslo, vyřídí se, uloží do spisu a po uplynutí lhůty se skartuje nebo archivuje. Všechno se zapisuje do auditní stopy.
+        </p>
+        <div class="viz-wrap" role="img" aria-label="Cesta dokumentu: vstupy z datové schránky, e-mailu a papíru vedou do příjmu a evidence s jednacím číslem, dál do zpracování a podpisu, uložení do spisu a nakonec skartace nebo archivu. Vše pod auditní stopou.">
+          <div class="viz-track">
+            <div class="viz-node viz-node--inputs">
+              <div class="viz-inputs-label">Co přijde do školy</div>
+              <div class="viz-chips">
+                <span class="viz-chip">Datová schránka</span>
+                <span class="viz-chip">E-mail</span>
+                <span class="viz-chip">Papír</span>
+              </div>
+            </div>
+            <div class="viz-sep"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="viz-node viz-node--step"><div class="viz-node__title">Příjem a evidence</div><div class="viz-node__sub">jednací číslo</div></div>
+            <div class="viz-sep"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="viz-node viz-node--step"><div class="viz-node__title">Zpracování</div><div class="viz-node__sub">podpis, vyřízení</div></div>
+            <div class="viz-sep"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="viz-node viz-node--step"><div class="viz-node__title">Uložení do spisu</div><div class="viz-node__sub">spisový plán</div></div>
+            <div class="viz-sep"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="viz-node viz-node--end"><div class="viz-node__title">Skartace nebo archiv</div><div class="viz-node__sub">po uplynutí lhůty</div></div>
+          </div>
+          <div class="viz-audit">
+            <div class="viz-audit__title">Auditní stopa</div>
+            <div class="viz-audit__sub">u každého dokumentu je vidět, kdo, kdy a co s ním udělal</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -225,7 +288,7 @@
 
     <!-- ================= 5. JAK TO BUDE PROBÍHAT (TIMELINE) ================= -->
     <section id="jak-to-probiha" class="bg-brand-soft py-16 sm:py-20">
-      <div class="container-wide">
+      <div class="container-tight">
         <h2 class="text-2xl font-extrabold sm:text-3xl">Připravíme vás na to v klidu.</h2>
         <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-600">
           Provedeme vás školením a zavedením elektronické spisové služby během podzimu 2026.
